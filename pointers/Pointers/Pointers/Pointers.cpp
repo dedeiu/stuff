@@ -26,6 +26,7 @@ int _tmain(int argc, _TCHAR* argv[])
 						nodeList->AddNode();
 					break;
 				case 4:
+						nodeList->PrintNodeList();
 					break;
 				case 0:
 				case 5:

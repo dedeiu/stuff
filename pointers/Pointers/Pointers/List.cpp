@@ -33,6 +33,7 @@ void List::AddNode()
 
 Node * List::GetFirstNode()
 {
+
 	printf("Searching for first node. \n");
 	return this->rootNode;
 }
@@ -40,7 +41,7 @@ Node * List::GetFirstNode()
 Node * List::GetLastNode()
 {
 	printf("Searching for last node. \n");
-	Node * searchedNode = this->rootNode;
+	Node * searchedNode = GetFirstNode();
 	while(searchedNode->next != 0)
 	{
 		printf("It\'s %d the search node? \n", searchedNode->value);
@@ -49,4 +50,16 @@ Node * List::GetLastNode()
 	printf("Last node found: %d \n", searchedNode->value);
 
 	return searchedNode;
+}
+
+void List::PrintNodeList()
+{
+	printf("**** Printing node list ****\n\n");
+	Node * node = GetFirstNode();
+	do
+	{
+		printf("Node %d: -> ", node->value);
+		node = node->next;
+	}while(node != 0);
+	printf("null \n\n");
 }

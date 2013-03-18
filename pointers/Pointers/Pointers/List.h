@@ -12,5 +12,6 @@ public:
 	Node * GetFirstNode();
 	Node * GetLastNode();
 	void AddNode();
+	void PrintNodeList();
 };
 
